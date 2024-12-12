@@ -1,0 +1,96 @@
+<!--订单页面-->
+<wxs module="filters" src="/pages/shopping/filter.wxs"></wxs>
+<!--顶部选择按钮-->
+<!--显示当前订单-->
+<view class="buttons" wx:if="{{isNow}}" >
+	<view class="activeButton">
+	<text class="activeText">当前订单</text>
+	</view>
+	<text class="divide">|</text>
+	<view class="unactiveButton" bind:tap="history">
+	<text class="unactiveText">历史订单</text>
+	</view>
+</view>
+<!--显示历史订单-->
+<view class="buttons" wx:if="{{!isNow}}" >
+	<view class="unactiveButton" bind:tap="getCurrent">
+	<text class="unactiveText" bind:tap="now">当前订单</text>
+	</view>
+	<text class="divide">|</text>
+	<view class="activeButton">
+	<text class="activeText">历史订单</text>
+	</view>
+</view>
+<!--当前订单-->
+<view wx:if="{{isNow}}" wx:for="{{noworders}}" >
+<!--单个订单容器-->
+<view class="anOrder">
+	<!--显示订单状态及结束时间-->
+	<view class="information" wx:if="{{item.conditions==1}}">已下单，厨师制作中 <text class="time">\n{{item.time}}</text></view>
+	<view class="information" wx:if="{{item.conditions==2}}">已做好，等待服务员上菜 <view class="time">\n{{item.time}}</view>
+	</view>
+	<view class="information" wx:if="{{item.conditions==3}}">已上菜，请慢用 <text class="time">\n{{item.time}}</text></view>
+	<view class="line"></view>
+	<!--所有菜品的信息-->
+	<block wx:for="{{item.items}}">
+		<view class="food">
+			<image src="{{item.img}}" class="photo" mode="aspectFill"/>
+			<text class="name">{{item.name}}</text>
+			<text class="middle">× {{item.quantity}} </text>
+			<text class="right">￥ {{filters.toFix(item.price)}}</text>
+		</view>
+	</block>
+	<view class="line"></view>
+	<!--底部显示总价-->
+	<view class="now-bottom">
+	<view class="total">总价：<text style="font-weight: bold;font-size: large;">￥{{filters.toFix(item.money)}}</text></view>
+	<view class="num">共{{item.foodnumber}}道菜</view>
+	</view>
+</view>
+	</view>
+
+<!--历史订单-->
+<view wx:if="{{!isNow}}">
+	<scroll-view class="history" scroll-y>
+	<!--单个历史订单-->
+		<view class="anHistory" wx:for="{{histories}}">
+		<view class="condition">
+			<view class="wrapper">
+			<text class="shop">湖底捞火锅店</text>
+			<text class="historyTime">{{item.time}}</text>
+		</view>
+		<text class="finish">已完成</text>
+		</view>
+		
+			<view class="things" bind:tap="toDetail" data-value="{{item.finishedorderid}}">
+				<view class="image-container">
+				<!--前两道菜的图片-->
+				<image src="{{item.img1}}" class="logo" mode="heightFix"/>
+				<image src="{{item.img2}}" class="logo" mode="heightFix"/>
+		</view>
+		<!--价格信息-->
+			<view class="price">
+			<text class="shop">￥{{item.money}}\n</text>
+			<text class="sum">共{{item.foodnumber}}道菜</text>
+		</view>
+			</view>
+			
+			<view class="line-history"></view>
+			<view class="bottom">
+			<text style="font-size: 26rpx; width: 30%;">订单号：</text><text style="font-weight: bold; width: 30%;">C0{{item.finishedorderid}}</text>
+			<!--订单的评价结果-->
+			<view class='starbox'>
+      <block wx:for="{{item.comment}}" wx:key='index'>
+          <image class="starImage" src="/images/star-red.png">
+          </image>
+        </block>
+        <block wx:for="{{5-item.comment}}" wx:key='index'>
+          <image class="starImage" src="/images/star-grey.png">
+          </image>
+        </block>
+        
+    </view>
+			</view>
+		</view>
+	</scroll-view>
+</view>

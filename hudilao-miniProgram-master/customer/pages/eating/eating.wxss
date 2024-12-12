@@ -1,0 +1,188 @@
+/* pages/eating/eating.wxss */
+/* pages/orders/orders.wxss */
+page{
+	background-color: #f0f0f0
+}
+.buttons{
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	border-radius: 0 0 20px 20px;
+}
+.activeButton{
+	display: flex;
+	align-items: center;
+  justify-content: center;
+	height: 80rpx;
+	width: 200rpx;
+	margin: 10rpx 100rpx;
+	border-radius: 20px;
+
+}
+.unactiveButton{
+	display: flex;
+	align-items: center;
+  justify-content: center;
+	height: 80rpx;
+	width: 200rpx;
+	margin: 10rpx 100rpx;
+	border-radius: 20px;
+
+}
+.activeText{
+	font-weight: bolder;
+	color: black;
+}
+.unactiveText{
+	font-weight: 500;
+}
+.wrapper{
+	display: flex;
+	flex-direction: column;
+}
+.logo{
+	width: 100rpx;
+	margin: 0 10rpx;
+}
+.photo{
+	width: 80rpx;
+	height: 80rpx;
+	margin-right: 20rpx;
+	border-radius: 10px;
+}
+.time{
+	text-align: right;
+	color: grey;
+	font-size: small;
+	margin-left: 0rpx;
+}
+
+.shop{
+	font-weight: bolder;
+	margin-left: 0rpx;
+	
+}
+.sum{
+	color: grey;
+	font-size: 20rpx;
+	margin-left: 0rpx;
+}
+.finish{
+	font-size: 28rpx;
+	margin-left: 160rpx;
+}
+.anOrder{
+	background-color: white;
+	margin: 30rpx 20rpx;
+	border-radius: 15px;
+	padding: 20rpx 50rpx;
+}
+.line{
+	height: 1rpx;
+	background-color: lightgrey;
+
+}
+
+.three{
+	display: flex;
+	justify-content: center;
+	padding: 20rpx;
+	background-color: white;
+	margin-top: 10rpx;
+	border-radius: 10px;
+}
+.havePaid{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	align-items: center;
+	padding: 20rpx 50rpx;
+	background-color: white;
+	margin-top: 10rpx;
+	border-radius: 10px;
+}
+.food{
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap; /* 添加此行 */
+	margin: 10rpx 0;
+	font-size: 28rpx;
+}
+.name{
+	display: inline-block; /* 添加此行 */
+	text-align: left;
+	width: 35%;
+}
+
+.middle {
+	margin-right: 40rpx;
+	margin-left: 10rpx;
+	width: 10%;
+}
+.right {
+	width:25%;
+	margin-right: 0rpx;
+}
+
+.image-container{
+	display: flex;
+}
+.information{
+	margin-left: 10rpx;
+	padding-left: 0rpx;
+	padding-top: 20rpx;
+	font-size: medium;
+	font-weight: bold;
+}
+.condition{
+	display: flex;
+	align-items: center;
+	margin-left: 30rpx;
+	margin-bottom: 20rpx;
+}
+
+.things{
+	margin-left: 40rpx;
+	font-size: 30rpx;
+	display: flex;
+}
+.price{
+	margin-left: auto;
+	margin-right: 50rpx;
+	text-align: right;
+}
+.detailButton{
+	display: flex;
+	justify-content: flex-end;
+	margin-left: 300rpx;
+}
+
+.divide{
+	color: lightgrey;
+	margin-top: 22rpx;
+	font-size: 14px;
+}
+
+.bottom{
+	display: flex;
+	align-items: center;
+	margin: 4rpx 40rpx;
+}
+.now-bottom{
+	display: flex;
+	align-items: center;
+	margin: 0rpx 4rpx;
+}
+.total{
+	width: 50%;
+}
+.num{
+	width:50%;
+	text-align: right;
+	color: gray;
+}
+.comment{
+	margin-left: auto;
+}

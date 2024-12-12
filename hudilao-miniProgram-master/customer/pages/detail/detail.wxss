@@ -1,0 +1,105 @@
+/* pages/detail/detail.wxss */
+page{
+  background-color: #f0f0f0;
+}
+button{
+	height: 80rpx;
+	margin: 10rpx 13rpx;
+	display: inline;
+}
+
+.scroll{
+	height: 1050rpx;
+  background-color: rgb(255, 255, 255);
+  margin: 10rpx;
+  padding: 10rpx;
+  width: 95%;
+  border-radius: 20rpx;
+}
+
+
+.food{
+	width: 100%;
+	background-color: yellow;
+	display: flex;
+}
+#name{
+	width:33%
+}
+#quantity{
+	width:33%
+}
+#price{
+	width:33%
+}
+.restaurant{
+  height: 60rpx;
+  margin: 10rpx;
+  display: flex;
+  flex-direction: row;
+
+}
+.line{
+  height: 1rpx;
+  background-color: gray;
+  margin: 5rpx 10rpx;
+}
+
+.ordermsg{
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin: 20rpx;
+}
+
+
+.information{
+  display: flex;
+  align-items: center;
+  width:90%;
+  margin-left: 20rpx;
+}
+
+.conmentbox{
+  
+  height: 100rpx;
+  background-color: rgb(255, 255, 255);
+  margin: 10rpx;
+  border-radius: 10rpx;
+   position: relative;
+   justify-content:center;
+   align-items: center;
+
+}
+.conmentbut{
+  
+   position: absolute;
+   left:0rpx;
+   text-align: center;
+   margin: 15rpx;
+}
+.conmentinput{
+  background-color: rgb(255, 255, 255);
+  width: 100rpx;
+  position: absolute;
+  left:250rpx;
+  text-align: center;
+  margin: 15rpx;
+  top:15rpx;
+}
+.confirm{
+  
+  width: 180rpx;
+  position: absolute;
+  right:20rpx;
+  text-align: center;
+  margin: 15rpx;
+}
+.star{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  left:390rpx;
+  top:30rpx;
+}

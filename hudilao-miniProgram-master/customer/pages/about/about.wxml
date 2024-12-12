@@ -1,0 +1,59 @@
+<!--关于我们页面-->
+<view class="aboutus">
+<!--使命-->
+  <view class="container1">  
+    <view class="title">  
+      <text >我们的使命</text>
+    </view>
+    <view class="content">  
+      <text style="text-align: center; vertical-align: middle;"> 在湖底捞火锅，我们的使命是通过提供最高质量的食材和令人愉悦的用餐环境，满足顾客的味蕾，提供世界级的火锅体验。我们秉承着“食在四海，味由你定”的理念，致力于为每位顾客打造独特的、个性化的火锅风味。</text>
+    </view>
+  </view>
+  <!--特色-->>
+  <view class="container1">  
+    <view class="title">  
+      <text >我们的特色</text>
+    </view>
+    <view class="content">  
+      <text style="text-align: center; vertical-align: middle;"> 1. 食材鲜美：我们只选用最新鲜、最优质的食材，从肉类到海鲜、蔬菜和调味料，一切都精心挑选，确保您的火锅菜肴色香味俱佳。\n</text>
+      <text style="text-align: center; vertical-align: middle;"> 2. 创新菜单：我们的菜单充满创意，包括各种火锅底料、特色调味汁和美味的小吃，为您提供丰富多样的选择，让您的用餐体验更加多姿多彩。\n</text>
+      <text style="text-align: center; vertical-align: middle;"> 3. 服务热情：我们的工作人员受过专业培训，以确保每位顾客都能享受到温馨、贴心的服务。您的需求是我们的首要任务。\n</text>
+      <text style="text-align: center; vertical-align: middle;"> 4. 娱乐互动：我们提供多种娱乐元素，如独特的调味料表演和火锅底料创意造型，让用餐变得更加有趣。</text>
+    </view>
+  </view>
+<!--卫生和环保-->
+  <view class="container1">  
+    <view class="title">  
+      <text >关注卫生和环保</text>
+    </view>
+    <view class="content">  
+      <text style="text-align: center; vertical-align: middle;"> 我们非常重视食品卫生和环保责任。我们的厨房和餐厅设施都严格按照卫生标准运营，确保您的用餐安全。此外，我们致力于减少浪费和可持续发展，为环境保护出一份微薄之力。</text>
+    </view>
+  </view>
+
+  <view class="container1">  
+    <view class="title">  
+      <text >企业文化</text>
+    </view>
+    <view class="content">  
+      <text style="text-align: center; vertical-align: middle;"> 湖底捞始终秉承“服务至上、顾客至上”的理念，以创新为核心，改变传统的标准化、单一化的服务，提倡个性化的特色服务，将用心服务作为基本理念，致力于为顾客提供“贴心、温心、舒心”的服务；在管理上，倡导双手改变命运的价值观，为员工创建公平公正的工作环境，实施人性化和亲情化的管理模式，提升员工价值。</text>
+    </view>
+  </view>
+
+  <view class="container1">  
+    <view class="title">  
+      <text >宣言</text>
+    </view>
+    <view class="content1">  
+      <text style="text-align: center; vertical-align: middle;"> 
+         倡导平等，充分授权\n
+         学习进取，持续创新\n
+         自我批判，三思而行\n
+         诚实守信，敢于负责\n
+         与人为善，知恩图报\n
+         充满激情，团队合作\n
+      </text>
+    </view>
+  </view>
+
+</view>

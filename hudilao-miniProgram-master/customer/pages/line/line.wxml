@@ -1,0 +1,38 @@
+<!--排队页面-->
+<view class="container_head">
+		<!--背景图片-->
+		<image class="head_img" src="https://hudilao.oss-cn-nanjing.aliyuncs.com/2023-09-12/d6013af6-4648-4e6f-a716-8924522fe8c2.jpg"></image>
+	</view>
+	<!--弹窗-->
+	<view class="popup" wx:if="{{showpop}}">
+  <text>请到{{table}}桌就餐</text>
+</view>
+
+<!--未进入等待状态，显示取号按钮-->
+<block wx:if="{{isWaiting==0}}">
+	<view class="big-container">
+	<view class="circle">
+	<text class="buttonText" bind:tap="getIdButton">点击\n取号</text>
+	</view>
+</view>
+<view class="information">
+<text class="tips">美味马上来袭，\n请您稍加等待~</text>
+</view>
+<view class="backhome"><button type="warn" plain bind:tap="backHome">返回首页</button></view>
+</block>
+
+<!--已取号状态，显示排队进程-->
+<block wx:if="{{isWaiting}}">
+
+	<view class="waitID">您的排队号为 </view>
+
+		<view class="id">D 0{{waitingid}}</view>
+	<view class="front">前方还有 <text class="tableNum">{{waitingnumber}}</text> 桌在等待</view>
+
+	
+	<view class="backhome"><button type="primary" plain bind:tap="cancelButton">取消排号</button></view>
+<view class="backhome"><button type="warn" plain bind:tap="backHome">返回首页</button></view>
+</block>
+
+
+

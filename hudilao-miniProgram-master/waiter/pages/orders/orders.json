@@ -1,0 +1,7 @@
+{
+    "usingComponents": {"mydialog":"/components/msgdialog/msgdialog"},
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#ff0000"
+}

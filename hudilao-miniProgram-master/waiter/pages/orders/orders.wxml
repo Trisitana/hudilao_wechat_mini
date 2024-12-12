@@ -1,0 +1,65 @@
+<!--订单管理页面-->
+<scroll-view scroll-y class="orders" enable-flex  style="height:1400rpx;margin-top: 20rpx;">
+  <mydialog></mydialog>
+	<view class="flex-container">
+		<block wx:for="{{orderList}}" wx:for-orderid="orderid" wx:for-item="item">
+    <view class="order">
+			<!--以下展示店名以及状态-->
+			<view class="container1">
+        <view class="restaurant">
+          <view style="height: 50rpx;width:50rpx">
+             <image src="https://hudilao.oss-cn-nanjing.aliyuncs.com/2023-09-06/e2100e6c-3a9b-4dc8-8431-12798f0f2c73.jpg" style="width: 100%; height: 100%;" mode="aspectFit"></image>
+          </view>
+          <view style="margin-left: 10rpx;"><text>湖底捞(太阳城店)</text></view>
+        </view>
+        <view class="status" wx:if="{{item.paid==1}}">
+          <text>已支付</text>
+        </view>
+        <view class="status" wx:if="{{item.paid==0}}">
+          <text>未支付</text>
+        </view>
+      </view>
+
+      <!--以下展示订单菜品图片以及价格-->
+ 
+      <view class="container2" >
+       <view class="images">
+        <view style="height: 120rpx;width:120rpx;margin-left: 10rpx;margin-right: 10rpx;">
+          <image src="{{item.img1}}" style="width: 100%; height: 100%;border-radius: 40rpx;" mode="aspectFill"></image>
+        </view>
+        <view style="height: 120rpx;width:120rpx;margin-left: 10rpx;margin-right: 10rpx;">
+          <image src="{{item.img2}}" style="width: 100%; height: 100%;border-radius: 40rpx; " mode="aspectFill"></image>
+        </view>
+        <view style="height: 120rpx;width:120rpx; margin-left: 10rpx;margin-right: 10rpx;">
+          <image src="{{item.img3}}" style="width: 100%; height: 100%;border-radius: 40rpx;" mode="aspectFill"></image>
+        </view>
+       </view>
+       <view>
+         <text>¥{{item.money}}</text>
+       </view>
+      </view>
+      
+
+<!--以下展示桌号、时间、状态以及详情按钮-->
+			<view class="container3">			
+        <view class="time" style="width: 30%;">
+          <view>
+          <text>桌号：{{item.tableid}}</text>
+          </view>
+          <view>
+          <text style="font-size: 13px; font-style: italic;">{{item.time}}</text>
+          </view>
+        </view>
+        <view wx:if="{{item.conditions==1}}">已下单</view>
+        <view wx:if="{{item.conditions==2}}">已做好</view>
+        <view wx:if="{{item.conditions==3}}">已上菜</view>
+        <view wx:if="{{item.conditions==4}}">已结束</view>
+		    <view class="finddetail"bindtap="findDetail" data-id="{{item.orderid}}">查看详情
+        </view>
+      </view>
+			
+			</view>
+      <view wx:if="{{index % 2 === 1 || index === itemList.length - 1}}"></view>
+    </block>
+	</view>
+</scroll-view>

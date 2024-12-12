@@ -1,0 +1,47 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/orders/orders",
+    "pages/mine/mine",
+    "pages/line/line",
+    "pages/shopping/shopping",
+    "pages/wish/wish",
+    "pages/personal/personal",
+    "pages/login/login",
+    "pages/eating/eating",
+    "pages/activity/activity",
+    "pages/pay/pay",
+    "pages/about/about",
+    "pages/vip/vip",
+    "pages/detail/detail",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "湖底捞",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "首页",
+      "iconPath": "/images/home.png",
+      "selectedIconPath": "/images/home-active.png"
+    },
+    {
+      "pagePath": "pages/orders/orders",
+      "text": "订单",
+      "iconPath": "/images/order.png",
+      "selectedIconPath": "/images/order-active.png"
+    },
+    {
+      "pagePath": "pages/mine/mine",
+      "text": "我的",
+      "iconPath": "/images/account.png",
+      "selectedIconPath": "/images/account-active.png"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

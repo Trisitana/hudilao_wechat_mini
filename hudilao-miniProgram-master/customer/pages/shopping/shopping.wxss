@@ -1,0 +1,285 @@
+/* pages/shopping/shopping.wxss */
+.shopping{
+	height: 900rpx;
+	background-color: lightgoldenrodyellow;
+	display: flex;
+}
+.categories{
+	border: 1px solid red;
+	height: 120px;
+	width: 100px;
+}
+.items{
+	border: 1px solid blue;
+	height: 320rpx;
+	width: 200rpx;
+}
+.table{
+	display: flex;
+}
+.inputTable{
+	width: 100rpx;
+	border: black solid 1px;
+}
+.enterTable{
+	margin-left: 10rpx;
+}
+.productNav{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 1400rpx;
+}
+.left{
+  width: 25%;
+  font-size: 30rpx;
+  background-color: #ffffff;
+  height: 100% ;
+}
+.left view{
+  text-align: center;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.selected{
+  background-color: #fff;
+  border-left: 2px solid #E54847;
+  font-weight: bold;
+  color: #E54847;
+}
+.normal{
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #f2f2f2;
+}
+.right{
+  width:75%;
+  height: 100% ;
+
+}
+
+.item{
+  text-align:justify;
+  height: 120rpx;
+  line-height: 90rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.container1{
+
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+}
+
+.container2{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; 
+  width:700rpx;
+}
+
+.stepper {  
+  width: 80px;  
+  height: 26px;  
+  /*给主容器设一个边框*/  
+  border-radius: 3px;  
+  margin-left:200rpx;  
+  margin-right: auto;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  
+}
+
+/*加号和减号*/  
+.stepper text {  
+  border-radius: 4px;  
+  width: 20px;  
+  height: 20px;
+  line-height: 20px;  
+  text-align: center;  
+  float: left;  
+}  
+
+.mytable{
+  display: flex;
+  flex-direction: row;
+  width: 250rpx;
+  height: 100rpx;
+  top:0;
+  border: 1px solid rgb(255, 255, 255); 
+  background-color: lightcyan;
+}
+
+.tablebt{
+  font-size: 25rpx;
+}
+
+.images {
+  width:50px;
+  height:50px;
+  border-radius: 20rpx;
+  margin-right: 20rpx;
+}
+.msgname{
+  font-family: SimHei ;
+}
+.msgprice{
+  width: 10%;
+}
+.msg{
+  text-align: top; /* 水平文本对齐方式为左对齐 */
+  vertical-align: top; /* 垂直文本对齐方式为顶部对齐 */
+  margin-top: 0; /* 可选：去掉文本的上边距 */
+  padding: 0px; /* 可选：添加一些内边距来调整文本位置 */
+}
+
+.itemlist {
+  height: 160rpx;
+  display: flex;
+  justify-content:flex;
+  flex-direction: row;
+}
+
+.orderpage{
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+}
+
+.orderitem{
+
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+/*数值*/  
+.stepper input {  
+  width: 26px;  
+  height: 2px;  
+  float:none;  
+  margin: 0 auto;  
+  text-align: center;  
+  font-size: 12px;  
+  /*给中间的input设置左右边框即可*/  
+  border-left: 1px solid #ccc;  
+  border-right: 1px solid #ccc;  
+}
+/*普通样式*/  
+.stepper .normal{  
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #f2f2f2;
+} 
+
+
+/*禁用样式*/  
+.stepper .disabled{  
+  color: #ccc;  
+  visibility:hidden
+} 
+
+swiper{
+  height: 600px;
+}
+
+
+/*对话框 */
+.commodity_attr_box {
+  height: 100rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: rgb(75, 66, 66);
+  padding: 0rpx;
+  border-top-left-radius: 30rpx; 
+  border-top-right-radius: 30rpx; 
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.animationacss{
+  border-radius: 10rpx;
+  height: 400rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: rgb(255, 255, 255);
+  padding: 0rpx;
+  border-top-left-radius: 30rpx; 
+  border-top-right-radius: 30rpx; 
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(75, 72, 72, 0.5); 
+  z-index: 1; 
+}
+
+.titleview{
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+  height: 80rpx;
+  background-color: #d8d5d5;
+  display:flex;
+  flex:row;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.clearshop{
+  
+}
+
+/*确认按钮*/
+.finish{
+  height: 100rpx;
+  width: 150px !important;
+  font-size: larger;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top:0;
+  right:0;
+  bottom:0;
+  background-color: #ff0101;
+  
+}
+
+.shopicon{
+  padding: 25rpx;
+}
+.before{
+  font-size: small;
+  text-decoration: line-through;
+  color: gray;
+}
+.after{
+  font-size: large;
+  color: goldenrod;
+}
+
+.nameprice{
+  width: 350rpx;
+  display: flex;
+  flex-direction: row ;
+}
+

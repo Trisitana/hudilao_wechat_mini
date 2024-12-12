@@ -1,0 +1,98 @@
+<!--点餐页面-->
+<!--屏幕背景变暗的背景  -->
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+<!--购物车弹出框  -->
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+   <view class="shopicon" bindtap="showcurrentorder">
+    <image src="/images/shopbag.png" style="width: 30px; height: 30px;"></image>
+    <text style="color: rgb(255, 255, 255); font-size: 20px;">¥{{totalPrice}}</text>
+    </view>
+    <view class="mytable">桌号：
+      <picker mode="selector" range="{{numberRange}}" bindchange="handleNumberChange" class="picker" wx:if="{{!enterTable}}">
+    <view >
+      <text>{{table}}</text>
+    </view>
+  </picker>
+  <text wx:if="{{enterTable}}">{{table}}</text>
+    <button size="mini" class="tablebt" bind:tap="sentTable" wx:if="{{!enterTable}}">确认</button>
+    </view>
+    <button class='finish' bindtap="submitorder">已选好</button>
+</view>
+<!--已点商品详情弹出框  -->
+<view class="mask" wx:if="{{show}}" bindtap="close"></view>
+<view animation="{{animdata}}" class="animationacss" wx:if="{{show}}">
+  <view class="titleview">
+    <text style="position: absolute;left: 0;">已选菜品</text>
+    <button class="clearshop" style="font-size: 15px;width: auto; background-color: transparent;position: absolute;right: 0;" bindtap="clearshop">清空购物车</button>
+  </view>
+<scroll-view scroll-y="true" style="height: 200rpx;">
+<view class="orderpage">
+  <view class="orderitem" wx:for="{{orderfoodlist}}">
+    <view class="nameprice">
+     <view style="width: 200rpx;"> {{item.name}}</view>
+     <view style="width: 40rpx;"></view>
+     <view> ￥{{item.price}}</view>
+    </view>
+     <view class="stepper">  
+             <!-- 减号 -->  
+            <text class="{{item.minusStatus}}" bindtap="bindorderminus" data-index="{{index}}">-</text>  
+            <!-- 数值 -->  
+            <input class="{{item.minusStatus}}" type="number" bindchange="bindnumber"  value="{{item.number}}" data-index="{{index}}"/>  
+            <!-- 加号 -->  
+            <text class="normal"  bindtap="bindorderplus"  data-index="{{index}}">+</text>  
+     </view>  
+  </view>
+</view>
+</scroll-view>
+
+</view>
+
+
+<view class='productNav'>
+  <!-- 左侧菜品类别栏目 -->
+  <view class='left'>
+    <scroll-view class='store-menu' style="height:100%" scroll-y='true'>
+            <view wx:for='{{typelist}}' wx:key="{{item.type}}" data-id="{{item.type}}" bindtap='clickMenu' class="{{curId == item.type ? 'selected': ''}}">
+              <text>{{item.name}}</text>
+            </view>
+            <view style='height:90rpx'></view>
+    </scroll-view>
+  </view>
+  <!-- 右侧菜品信息以及点餐界面 -->
+  <view class='right' >
+    <mydialog></mydialog>
+    <view class='type' style="height: 100%;" >
+      <!-- current:当前所在滑块的 index -->
+      <!-- vertical:滑动方向是否为纵向 -->
+      <swiper current='{{currentTab}}' vertical='{{true}}'style="height: 100%;">
+        <!-- catchtouchmove 阻止弹窗后滚动穿透 -->
+        <swiper-item id="0" catchtouchmove="false">
+          <scroll-view scroll-y="true" style="height: 100%;"bindscroll="onRightScroll" scroll-into-view="m_{{toView}}">
+          <view class="itemlist" wx:for="{{foodlist}}" wx:key="{{item.foodid}}" id="m_{{item.foodid}}" >
+              <view>
+              <image  class="images" src="{{item.img}}" bindtap="previewImage" mode="aspectFill" />
+              </view>
+              <view class="container1">
+                <text class="msgname">{{item.name}}</text>
+                <view class="container2">
+                  <view style="width: 10%;">
+                    <text class="msgprice">¥{{item.price}}</text>
+                  </view>
+                  <view class="stepper">  
+                    <!-- 减号 -->  
+                    <text class="{{item.minusStatus}}" bindtap="bindMinus" data-index="{{index}}">-</text>  
+                    <!-- 数值 -->  
+                    <input class="{{item.inputStatus}}" type="number" bindchange="bindManual"  value="{{item.ordernumber}}" data-index="{{index}}"/>  
+                    <!-- 加号 -->  
+                    <text class="plusnormal"  bindtap="bindPlus"  data-index="{{index}}">+</text>  
+                  </view>
+                </view>
+              </view>
+            </view>        
+        </scroll-view>
+        </swiper-item>
+      </swiper> 
+    </view>
+  </view>
+</view>
+

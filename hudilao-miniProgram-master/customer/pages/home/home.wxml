@@ -1,0 +1,54 @@
+<!--主页-->
+<view class="welcome-container">
+			<view class="logo-container">
+				<!--LOGO-->
+				<image class="bigLogo" mode="aspectFit" src="/images/logo.png"></image>
+			</view>
+      <!--两行字-->
+			<view class="inf_content">
+				<text class="user_info" style="font-size: 40rpx;">Hi！</text>
+				<text class="family_info_ct_phone" style="font-size: 40rpx;">欢迎来到湖底捞!</text>
+			</view>
+		</view>
+    <!--店铺信息-->
+<view class="container">
+    <!--店名-->
+  <view class="header">
+    <image class="logo" src="/images/about.png"></image>
+    <view class="shop-info">
+      <text class="name">湖底捞火锅店</text>
+    </view>
+  </view>
+  <view class="info-row">
+  <!--slogan-->
+  <image class="icon" src="/images/brand.png"/>
+   <image src="/images/slogan.png" mode="aspectFit" class="slogan"/>
+  </view>
+  <!--营业时间-->
+  <view class="info-row">
+    <image class="icon" src="/images/time.png"></image>
+    <text class="time">营业时间：早10:00-次日5:00</text>
+  </view>
+</view>
+<!--两个按钮-->
+<view class="big-container">
+<!--左侧-->
+  <view class="little-left">
+	<image src="/images/eating.png" class="enterButton" mode="aspectFit" bind:tap="enter"/>
+	<view class="diancan" bind:tap="enter">点餐</view>
+  </view>
+  <!--中间的分隔线-->
+  <view class="divide">|</view>
+  <!--右侧按钮-->
+  <view class="little-right">
+	<image src="https://hudilao.oss-cn-nanjing.aliyuncs.com/2023-09-12/cdda274d-5acd-494f-9b36-7c327607de2c.png" class="enterButton" mode="aspectFit" />
+	<view class="diancan" bind:tap="toActivity">线下活动</view>
+  </view>
+</view>
+
+<!--底部显示地址-->
+<view class="bottom">
+  <image class="icon" src="/images/location.png" style="margin-left: 40rpx;"></image>
+<text class="address" >江宁区双龙大道1539号21世纪太阳城A区三楼</text>
+</view>
+

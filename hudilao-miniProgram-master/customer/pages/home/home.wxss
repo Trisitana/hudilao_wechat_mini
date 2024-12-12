@@ -1,0 +1,166 @@
+/* pages/home/home.wxss */
+page{
+	background-color: #f0f0f093;
+}
+.swiper-container{
+	height: 150px;
+}
+
+.item{
+	height: 100%;
+	line-height: 150px;
+	text-align: center;
+}
+/*
+swiper-item:nth-child(1) .item{
+	background-color: lightgreen;
+}
+swiper-item:nth-child(2) .item{
+	background-color: lightskyblue;
+}
+swiper-item:nth-child(3) .item{
+	background-color: lightpink;
+}
+*/
+.container {
+  background-color:white; 
+	padding: 20rpx;
+	border-radius: 20px;
+	margin-top: 50rpx;
+	margin-left: 10rpx;
+	margin-right: 10rpx;
+}
+
+.header {
+  display:flex;
+	align-items: center;
+	width: 100%;
+}
+
+.logo {
+  width: 50rpx;
+  height: 50rpx;
+	margin-right: 26rpx;
+	margin-left: 30rpx;
+}
+.bigLogo{
+	height: 150rpx;
+	margin-left: -200rpx;
+}
+.slogan{
+	height: 80rpx;
+	margin-left: -14rpx;
+}
+.info-row {
+  display: flex;
+  align-items: center;
+	margin-top: 10px;
+	margin-right: 0rpx;
+	width: 90%;
+}
+
+.icon {
+  width: 50rpx;
+	height: 50rpx;
+	margin-left: 0rpx;
+  margin-right: 24rpx;
+}
+.name{
+	font-size: 34rpx;
+}
+.address,.time{
+	font-size: 30rpx;
+	color: gray;
+}
+.enter{
+	height: 300rpx;
+}
+.enterButton{
+	height: 200rpx;
+}
+.diancan{
+	font-size: large;
+	font-weight: bold;
+}
+.big-container{
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+	margin-top: 10rpx;
+}
+.little-left {
+	width: 43%;
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color:white; 
+	padding: 20rpx;
+	border-radius: 20px 0px 0px 20px;
+	margin-top: 0rpx;
+	margin-bottom: 80rpx;
+	margin-left: 10rpx;
+
+}
+.little-right {
+	width: 43%;
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color:white; 
+	padding: 20rpx;
+	border-radius: 0px 20px 20px 0px;
+	margin-top: 0rpx;
+	margin-bottom: 80rpx;
+
+	margin-right: 10rpx;
+}
+.divide{
+	height: 290rpx;
+	width: 0%;
+	font-size: 200rpx;
+	font-weight: 100;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 115rpx;
+	color: gainsboro;
+	
+}
+.inf_content{
+  display: flex;
+  flex-direction: column;
+	margin-right: auto;
+	margin-left: -100rpx;
+}
+.user_info{
+  text-align: left;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 8rpx;
+}
+.family_info_ct_phone{
+  text-align: center;
+  justify-content: center;
+  font-size: 30rpx;
+	font-weight: 600;
+}
+.welcome-container{
+	display: flex;
+	align-items: center;
+	margin-top: 20rpx;
+}
+.logo-container{
+	margin-right: auto;
+	width: 10%;
+}
+.bottom{
+	position:absolute;
+	bottom: 20rpx;
+	margin-top: 100rpx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

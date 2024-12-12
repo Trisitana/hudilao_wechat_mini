@@ -1,0 +1,16 @@
+<!--components/msgdialog/msgdialog.wxml-->
+
+<view class="container1" wx:if="{{showmsgdialog}}">
+  <view class="content">
+    <!-- 弹窗内容 -->
+    <view style="height: 50rpx;"> </view>
+    <view style="height: 140rpx;">
+      <text class="popup-text" style=" font-size: 15px;">{{callmsg}}</text>
+    </view>
+  </view>
+    <!-- 关闭按钮 -->
+  <view class="close" bind:tap="closePopup">
+   <text>了解</text>
+  </view>
+</view>
+

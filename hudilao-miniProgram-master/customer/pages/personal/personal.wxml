@@ -1,0 +1,73 @@
+<!--pages/personal/personal.wxml-->
+<view class="whole">
+	<view class="container_head">
+		<!--背景图片-->
+		<image class="head_img" src="https://hudilao.oss-cn-nanjing.aliyuncs.com/2023-09-12/d6013af6-4648-4e6f-a716-8924522fe8c2.jpg"></image>
+	</view>
+	<block wx:if="{{updating}}"><!--修改状态-->
+	<view class="all">
+		<!--头像-->
+		<view class="icon" bindtap="modifyicon">
+	<image src="{{icon}}" mode="aspectFill" class="circle"/>
+		</view>
+		<!--手机号-->
+			<view class="information">手机号：<text class="phone"> {{phonenumber}}</text></view>
+			<!--淡淡的分割线-->
+			<view class="divide">
+				<view class="line"></view>
+			</view>
+				<view class="information">
+						<text>昵称：</text>
+						<!--昵称输入框-->
+							<view class="inputView"> 
+	 			<input value="{{nickname}}" bindblur="setNickname" style="width: 80%;" placeholder="请输入昵称"/> 
+ 				</view> 
+					</view>
+					<view class="divide">
+						<view class="line"></view>
+					</view>
+					<!--生日选择框-->
+				<view class="information">
+					<text>生日：</text>
+					<picker mode="date" start="1970-01-01" end="2030-12-31" bindchange="handleTimeChange">
+   		 <view class="inputTime">{{birthday}}</view>
+ 				 </picker>
+			</view>
+		</view>
+		
+</block>
+<!--修改完毕-->
+<block wx:if="{{!updating}}">
+	<view class="all">
+	<!--头像-->
+		<view class="icon">
+	<image src="{{icon}}" mode="aspectFill" class="circle"/>
+		</view>
+		<!--手机号-->
+			<view class="information">手机号：<text class="phone"> {{phonenumber}}</text></view>
+			<view class="divide">
+				<view class="line"></view>
+			</view>
+			<!--昵称-->
+				<view class="information">
+						<text>昵称：</text>
+							<view class="showName"> 
+									{{nickname}}
+ 				</view> 
+					</view>
+					<view class="divide">
+						<view class="line"></view>
+					</view>
+					
+				<view class="information">
+					<text>生日：</text>
+   		 <view class="showTime">{{birthday}}</view>
+			</view>
+		</view>
+
+</block>
+</view>
+<!--位于底部的提交按钮-->
+<button class="submit" style="width: 100%;" wx:if="{{updating}}" bindtap="submit">提交</button>
+
+ 

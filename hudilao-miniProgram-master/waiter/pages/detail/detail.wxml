@@ -1,0 +1,87 @@
+<!--订单详情页面-->
+<!--展示菜单-->
+    <scroll-view class="scroll" scroll-y>
+      <mydialog></mydialog>
+      <!--logo和店名-->
+	   <view class="restaurant">
+      <view style="height: 50rpx;width:50rpx">
+          <image src="https://hudilao.oss-cn-nanjing.aliyuncs.com/2023-09-06/e2100e6c-3a9b-4dc8-8431-12798f0f2c73.jpg" style="width: 100%; height: 100%;" mode="aspectFit"></image>
+      </view>
+          <view style="margin-left: 10rpx;"><text>湖底捞(太阳城店)</text></view> 
+  </view>
+  <!--订单号和桌号-->
+  <view class="information">
+    <view style="width: 50%;">桌号：{{ordermsg.tableid}}</view>
+    <view> 订单号: {{ordermsg.orderid}}</view>
+     </view>
+     <view class="line"></view>
+     <view>
+     <!--遍历菜单数组并渲染界面-->
+       <view class="ordermsg" wx:for="{{orderfoodlist}}"bindlongpress="modifyfood"data-index="{{index}}">    
+        <view style="display: flex;">
+         <view style="height: 100rpx;width:100rpx">
+           <image src="{{item.img}}" style="width: 100%; height: 100%;border-radius: 10rpx;" mode="aspectFill"></image>
+         </view>
+         <view style="margin-left: 15rpx;">
+          <view >{{item.name}}</view>
+          <view>×{{item.quantity}}</view>
+         </view>
+        </view> 
+         <view style="font-size: 35rpx;margin-right: 20rpx;">
+          ￥{{item.price}}
+         </view>
+         
+       </view>
+     </view>
+    </scroll-view>
+
+
+<!--底部按钮部分-->
+<view style="display: flex;justify-content: left;width: 750rpx;flex-direction: row;height:220rpx">
+	<button style="width: 200rpx;height: 80rpx;" size="mini" plain wx:if="{{ordermsg.conditions==2}}" bind:tap="modifycondition">已上菜</button>
+  <button style="width: 200rpx;height: 80rpx;" size="mini" plain wx:if="{{ordermsg.conditions==3}}" bind:tap="modifycondition">已结束</button>
+	<button style="width: 200rpx;height: 80rpx;" wx:if="{{!ordermsg.paid}}" hidden="{{ordermsg.payButton}}" size="mini" type="primary" plain bind:tap="finishPay">完成支付</button>
+	<button style="width: 200rpx;height: 80rpx;" wx:if="{{!ordermsg.emergency&&ordermsg.conditions<2}}"  size="mini" type="warn" bind:tap="urge" plain>催菜</button>
+</view>
+
+
+<!--服务员可以通过此弹窗修改状态-->
+<block wx:if="{{isShowConfirm}}">
+      <view class='toast-box'>
+        <view class='toastbg'></view>
+        <view class='showToast'>
+            <view class='toast-title'>
+                <text style="font-weight: bold;">修改状态</text>
+                <view class="close" bindtap="closemodify">
+                  <image src="/images/close.png" style="width: 35rpx; height: 35rpx;"></image>
+                </view>
+            </view>
+            <view class='toast-main'>
+                  <view class="selectcondition">
+                    <button class="condition" size="mini" bindtap="condition3">已上菜</button>
+                  </view>
+                  <view class="selectcondition">
+                    <button class="condition" size="mini" bindtap="condition4">已结束</button>
+                  </view>
+            </view>
+        </view>
+    </view>
+  </block>
+   
+
+    <!--服务员可长按菜品来修改用户还未做好的订单-->
+    <view class="popup" wx:if="{{showpopup}}">
+     <view style="height: 80rpx;text-align: left;padding: 10rpx;border-bottom: solid 1rpx  lightsalmon;">
+       <text>修改{{orderfoodlist[index].name}}数量</text>
+     </view>
+     <view style="height: 120rpx;display: flex; justify-content: center; align-items: center;border-bottom: solid 1rpx  lightsalmon;">
+       <input type="number" placeholder="请输入修改数量" value="{{item.quantity}}"bindinput="inputchange"/>
+     </view>
+     <view style="height: 100rpx;display: flex; justify-content: center; align-items: center;">
+       <button style="background-color:  rgb(255, 255, 255);" bind:tap="closepopup">取消</button>
+       <button style="background-color:  rgb(255, 255, 255);" bind:tap="submit">确认</button>
+     </view>
+    </view>
+               
+   
+   

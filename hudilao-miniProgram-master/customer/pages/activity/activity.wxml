@@ -1,0 +1,7 @@
+<!--线下活动页面-->
+
+<image src="/images/activity1.jpg" class="activity" mode="aspectFit"/>
+
+<image src="/images/activity2.jpg" class="activity" mode="aspectFit"/>
+<image src="/images/activity3.jpg" class="activity3" mode="aspectFit"/>
+

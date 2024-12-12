@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/announcement/announcement",
+    "pages/orders/orders",
+    "pages/shopping/shopping",
+    "pages/login/login",
+    "pages/detail/detail",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "湖底捞",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/announcement/announcement",
+        "text": "通知公告",
+        "iconPath": "/images/announcement.png",
+        "selectedIconPath": "/images/announcement-active.png"
+      },
+      {
+        "pagePath": "pages/orders/orders",
+        "text": "订单管理",
+        "iconPath": "/images/order.png",
+        "selectedIconPath": "/images/order-active.png"
+      },
+      {
+        "pagePath": "pages/shopping/shopping",
+        "text": "点餐",
+        "iconPath": "/images/cart.png",
+        "selectedIconPath": "/images/cart-active.png"
+      }
+    ]
+},
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+  
+}

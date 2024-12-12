@@ -1,0 +1,56 @@
+<!--我的页面-->
+
+<!-- 用户列表选项 -->
+
+<view class="parent_catainer">
+	<!-- 头部 -->
+	<view class="container_head">
+		<!--背景图片-->
+		<image class="head_img" src="https://hudilao.oss-cn-nanjing.aliyuncs.com/2023-09-12/d6013af6-4648-4e6f-a716-8924522fe8c2.jpg"></image>
+		<view class="head_pers_info" bindtap="toPersonal">
+			<view class="head_pic">
+				<!--头像-->
+				<image class="head_pic_content" mode="aspectFit" src="{{icon}}"></image>
+			</view>
+			<view class="inf_content">
+				<text class="user_info" style="font-size: 40rpx;">{{nickname}}</text>
+				<text class="family_info_ct_phone" style="font-size: 30rpx;">欢迎来到湖底捞!</text>
+			</view>
+		</view>
+	</view>
+	<!--会员中心按钮-->
+	<view class="VIP-container" bind:tap="toVip">
+		<view class="info-container">
+			<image class="icon" src="/images/crown.png"></image>
+			<!--根据会员等级显示对应的会员名字-->
+			<view class="text-container">
+				<text class="description" wx:if="{{ranks==1}}">麻辣探险家</text>
+				<text class="description" wx:if="{{ranks==2}}">热情火锅客</text>
+				<text class="description" wx:if="{{ranks==3}}">湖底品鉴师</text>
+				<text class="description" wx:if="{{ranks==4}}">湖底捞打师</text>
+				<text class="description" wx:if="{{ranks==5}}">湖底捞传奇</text>
+			</view>
+		</view>
+	</view>
+	<!--下方小栏目-->
+	<view class="userItemListView">
+		<!--心愿单按钮-->
+		<view class="my_priview_md" bindtap="toWishList">
+			<image class="my_priview" src="/images/wish.png"></image>
+			<text>我的心愿单</text>
+			<view class="arrow"></view>
+		</view>
+		<!--修改个人资料按钮-->
+		<view class="my_priview_md" bindtap="toPersonal">
+			<image class="my_priview" src="/images/loginpeople.png"></image>
+			<text>修改个人资料</text>
+			<view class="arrow"></view>
+		</view>
+		<!--关于我们按钮-->
+		<view class="my_priview_md" bindtap="toAbout">
+			<image class="my_priview" src="/images/about.png"></image>
+			<text>关于我们</text>
+			<view class="arrow"></view>
+		</view>
+	</view>
+</view>

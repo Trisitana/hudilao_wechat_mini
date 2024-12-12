@@ -1,0 +1,70 @@
+/* pages/login/login.wxss */
+.logo{
+}
+.logoContainer{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.login-from { 
+	margin-top: 20px; 
+	flex: auto; 
+	height:100%; 
+	width: 100%;
+	border: none;
+	border-radius: 40px;
+  padding: 1px;
+  box-shadow: 0 0 0 2px #000;
+} 
+.loginLab { 
+	margin: 15px 15px 15px 10px; 
+	color: #545454; 
+	font-size: 35rpx;
+} 
+.inputView {
+	margin-top: 60rpx; 
+	margin-left: 10rpx;
+	width: 95%;
+	background-color: #fff; 
+	height: 80rpx;
+	line-height: 80rpx; 
+	border: none;
+	border-radius: 40px;
+  box-shadow: 0 0 0 1px rgb(146, 201, 201);
+} 
+.inputText { 
+	display: block; 
+	float: right; 
+	text-align: left; 
+	margin-right:240rpx; 
+	height: 80rpx;
+	color: #000; 
+	font-size: 36rpx ;
+} 
+
+.nameImage, .keyImage {
+	 
+	margin-left: 30rpx; 
+	margin-bottom: -10rpx;
+	width: 20px; 
+	height: 21px;
+} 
+.enter{
+	margin-top: 80rpx;
+	font-weight: bolder;
+}
+.line { 
+	width: 100%; 
+	height: 1px; 
+	background-color: #cccccc; 
+	margin-top: 1px; 
+} 
+
+.welcome{
+	margin-top: 50rpx;
+	margin-left: 20rpx;
+	font-size: 80rpx ;
+	font-weight: bold;
+	font-style: italic;
+	color: rgb(219, 28, 28);
+}

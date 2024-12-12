@@ -1,0 +1,131 @@
+/* pages/personal/personal.wxss */
+page{
+	background-color: #f0f0f0
+}
+.container_head{
+  height: 340rpx;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+ 
+.head_img {
+  position: absolute;
+  width: 100%;
+  height: 340rpx;
+  border-radius: 0px 0px 30px 30px;
+}
+.circle{
+  width: 180rpx; /* 设置图片的宽度和高度相等 */
+  height: 180rpx;
+  border-radius: 50%; /* 设置圆角半径为 50% */
+  border: 1px solid gray;
+}
+.icon{
+  position: relative;
+  height: 150rpx;
+  top: -90rpx;
+  left: 250rpx;
+  border-radius: 50%; /* 设置圆角半径为 50% */
+
+}
+.showName{
+  display: flex;
+  align-items: center;
+
+  height: 70rpx;
+  margin: 10rpx;
+  margin-left: 40rpx;
+}
+.showTime{
+  display: flex;
+  align-items: center;
+  width: 300rpx;
+  height: 70rpx;
+  margin: 10rpx;
+  margin-left: 40rpx;
+}
+.inputTime{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300rpx;
+  height: 70rpx;
+  margin: 10rpx;
+	border: none;
+	border-radius: 40px;
+  box-shadow: 0 0 0 1px rgb(146, 201, 201);
+}
+.inputView{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300rpx;
+  height: 70rpx;
+  margin: 10rpx;
+	border: none;
+	border-radius: 40px;
+  box-shadow: 0 0 0 1px rgb(146, 201, 201);
+}
+.information{
+  margin: 30rpx 40rpx;
+  align-items: center;
+  display: flex;
+  height: 80rpx;
+}
+.whole{
+  position: relative;
+}
+.all{
+  position: relative;
+  width: 90%;
+  top: -100rpx;
+  left: 40rpx;
+  background-color: white;
+  height: 600rpx;
+  border-radius: 30px;
+}
+
+.VIP{
+  display: flex;
+  background-color: teal;
+  justify-content: center;
+  margin-bottom: 100rpx;
+}
+.submit{
+  position: absolute;
+  bottom: 20rpx;
+  background-color: red;
+  color: white;
+  border-radius: 20rpx;
+}
+.line{
+  height: 1rpx;
+  width: 85%;
+	background-color: #ccc;
+}
+.divide{
+  display: flex;
+
+  justify-content: center;
+}
+.phone{
+  font-size: large
+}
+
+.container1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container2{
+  display: flex;
+  flex:7
+}
+
+.submitbutton{
+  margin-bottom: 100rpx;
+}

@@ -1,0 +1,49 @@
+/* pages/about/about.wxss */
+page{
+	background-color: #4a4a4a
+}
+text{
+  color: burlywood;
+}
+view{
+  color: burlywood;
+}
+.aboutus{
+  display: flex;
+  flex-direction: column;
+}
+
+.container1{
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  border: 1px solid burlywood;
+	height: auto;
+  margin: 40rpx 30rpx;
+  padding: 15rpx;
+}
+
+
+
+.title{
+  border-bottom: 1px solid burlywood;
+  width: 100%;
+  height: 20% ;
+  align-content: center;
+  display: flex; 
+  justify-content: center;
+   align-items: center;
+}
+
+.content{
+  width: 100%;
+  height: 80%;
+}
+
+.content1{
+  width: 100%;
+  height: 80%;
+  display: flex; 
+  justify-content: center;
+   align-items: center;
+}

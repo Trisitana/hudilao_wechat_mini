@@ -1,0 +1,20 @@
+<!--登录页面-->
+<view class="logoContainer">
+	<image src="https://hudilao.oss-cn-nanjing.aliyuncs.com/2023-09-06/e2100e6c-3a9b-4dc8-8431-12798f0f2c73.jpg" mode="aspectFit" class="logo"></image>
+	<view class="line"></view> 
+	<text class="welcome">欢迎来到湖底捞！</text>
+</view>
+
+
+ <!--账号--> 
+ <view class="inputView"> 
+ 	 <image class="nameImage" src="/images/loginpeople.png"></image> 
+	 <input class="inputText" value="{{account}}" placeholder="请输入账号" bindblur="accountHandler" /> 
+ </view> 
+
+ <!--密码--> 
+ <view class="inputView"> 
+  <image class="keyImage" src="/images/lock.png"></image> 
+	<input class="inputText" password="true" value="{{password}}" placeholder="请输入密码" bindblur="passwordHandler"/> 
+ </view> 
+ <button type="warn" bind:tap="loginRequest" plain class="enter" style="width: 250rpx;font-size: 40rpx;">确认</button>

@@ -1,0 +1,46 @@
+<!--通知公告页面-->
+<!-- 在scroll-view中设置scroll-y="true"以启用垂直滚动 -->
+
+<scroll-view scroll-y="true" style="height:1400rpx;margin-top: 30rpx;">
+  <!-- 可滑动窗口 -->
+
+  <view class="anounlist">
+    <!-- 定义公告列表容器 -->
+    <!-- 遍历公告数组并打印 -->
+    <view class="anounitem" wx:for="{{annoucements}}" wx:for-item="item">
+      <!-- 遍历公告数组，每个公告项为一个anounitem -->
+      <!-- 根据item的title属性判断显示的图标 -->
+      <view class="img" wx:if="{{item.title=='呼叫'}}">
+        <image src="/images/customer.png" style="width:100%;height: 100%;"></image>
+      </view>
+      <view class="img" wx:if="{{item.title=='加班'}}">
+        <image src="/images/admin.png" style="width:100%;height: 100%;"></image>
+      </view>
+      <view class="img" wx:if="{{item.title!='加班'&&item.title!='呼叫'}}">
+        <image src="/images/other.png" style="width:100%;height: 100%;"></image>
+      </view>
+      <!-- 公告内容容器 -->
+      <view class="container1">
+        <!-- 容器1包含标题和时间 -->
+        <view class="container2">
+          <!-- 容器2用于排列标题和时间 -->  
+          <!-- 公告标题 -->
+          <view class="title">
+            <text>{{item.title}}</text>
+          </view>
+          <!-- 公告时间 -->
+          <view class="time">
+            <text style="font-size: 25rpx;color: cadetblue;">{{item.time}}</text>
+          </view>
+        </view>
+        <!-- 公告内容 -->
+        <view class="content" style="font-size: 25rpx;color: cadetblue;">{{item.content}}</view>
+        <view>    
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 引用自定义组件mydialog -->
+  <mydialog></mydialog>
+</scroll-view>

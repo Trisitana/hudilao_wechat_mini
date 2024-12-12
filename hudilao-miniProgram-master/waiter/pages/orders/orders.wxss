@@ -1,0 +1,92 @@
+/* pages/orders/orders.wxss */
+page{
+  background-color: rgb(241, 234, 234);
+}
+.orders{
+	background-color: rgb(241, 234, 234);
+	
+}
+.order{
+  padding: 20rpx;
+  margin: 20rpx;
+  width: 90%;
+  height: 350rpx;
+  border-radius: 30rpx;
+	background-color: rgb(255, 255, 255);
+	margin: 10rpx auto;
+	
+}
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.food{
+	width: 100%;
+	height: 40rpx;
+	padding: 1rpx 0;
+}
+.urgeFood{
+	width: 100%;
+	height: 40rpx;
+	padding: 2rpx 0;
+}
+.status{
+  align-items: center;
+}
+.condition{
+	width: 30%;
+}
+.foodList{
+	width: 100%;
+	height: 132rpx;
+}
+#urge{}
+
+#urge[hidden]{
+	display: none;
+}
+
+.container1{
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container2{
+  height:150rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.container3{
+  height:115rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.restaurant{
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+}
+.images{
+  width:70%;
+  display: flex;
+  
+  
+
+}
+
+.finddetail {
+  text-align: center;
+  width: 30%;
+  height:50rpx;
+  border: 1px solid rgb(68, 115, 202); 
+  color: rgb(68, 115, 202);
+  border-radius: 30rpx;
+}

@@ -1,0 +1,67 @@
+/* pages/vip/vip.wxss */
+page{
+	background-color: #4a4a4a;
+}
+text{
+	color: burlywood;
+}
+view{
+	color: burlywood;
+}
+.big-container{
+	border-radius: 20px;
+	border: 1px solid burlywood;
+	height: 500rpx;
+	margin: 40rpx 30rpx;
+}
+.title{
+	display: flex;
+	align-items: center;
+	height: 100rpx;
+	margin: 5rpx 30rpx;
+	font-size: 35rpx;
+	font-weight: bolder;
+}
+.line{
+	width: 100%;
+	background-color: burlywood;
+	height: 1rpx;
+}
+.content{
+	height: 400rpx;
+	margin: 10rpx
+}
+.many{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 360rpx;
+	margin-left: 10rpx;
+}
+.level{
+	height: 75rpx;
+	width:95%;
+	display: flex;
+	align-items: center;
+	
+}
+.logo{
+	height: 40rpx;
+	width: 15%;
+}
+.name{
+	width: 70%;
+	font-weight: 600;
+}
+.rule{
+	
+}
+.tips{
+	margin-left: 10rpx;
+	font-size: 30rpx;
+}
+.wish{
+	border-bottom: 1px solid burlywood;
+	margin-left: 10rpx;
+	font-size: 30rpx;
+}

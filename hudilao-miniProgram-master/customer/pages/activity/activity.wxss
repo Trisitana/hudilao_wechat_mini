@@ -1,0 +1,25 @@
+/* pages/activity/activity.wxss */
+page{
+	background-color: #f0f0f0;
+}
+.container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 0rpx;
+}
+
+.activity{
+	height: 380rpx;
+	width:90%;
+	border-radius: 20px;
+	margin-top: 20rpx;
+	margin-left: 36rpx;
+}
+.activity3{
+	height: 380rpx;
+	width:90%;
+	border-radius: 20px;
+	margin-top: 20rpx;
+	margin-left: 40rpx;
+}

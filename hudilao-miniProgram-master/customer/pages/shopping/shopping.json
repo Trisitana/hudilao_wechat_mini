@@ -1,0 +1,5 @@
+{
+    "usingComponents": {"myicon": "/miniprogram_npm/weui-miniprogram/icon/icon",
+      "mydialog":"/miniprogram_npm/weui-miniprogram/half-screen-dialog/half-screen-dialog"}
+
+}

@@ -1,0 +1,39 @@
+<!--用餐中页面-->
+<wxs module="filters" src="/pages/shopping/filter.wxs"></wxs>
+<view style="height: 200rpx;"></view>
+<view class="three" wx:if="{{!havePaid}}">
+<button type="warn" class="aButton" size="mini" style="width: 160rpx;" plain bind:tap="toShopping">去加菜</button>
+<button type="primary" size="mini" style="width: 160rpx;" bind:tap="toPay">去支付</button>
+<button type="warn" class="call" size="mini" style="width: 220rpx;" bind:tap="call">呼叫服务员</button>
+</view>
+<view class="havePaid" wx:if="{{havePaid}}"><text>您已支付订单，请慢用！ </text><button type="warn" class="call" size="mini" style="width: 240rpx;" bind:tap="call">呼叫服务员</button></view>
+<!--显示订单列表-->
+<view wx:for="{{noworders}}" >
+<!--单个订单-->
+<view class="anOrder">
+	<view class="information" wx:if="{{item.conditions==1}}">已下单，厨师制作中 <text class="time">\n{{item.time}}</text></view>
+	<view class="information" wx:if="{{item.conditions==2}}">已做好，等待服务员上菜 <view class="time">\n{{item.time}}</view>
+	</view>
+	<view class="information" wx:if="{{item.conditions==3}}">已上菜，请慢用 <text class="time">\n{{item.time}}</text></view>
+	<view class="line"></view>
+	<block wx:for="{{item.items}}">
+		<view class="food">
+			<image src="{{item.img}}" class="photo" mode="aspectFill"/>
+			<text class="name">{{item.name}}</text>
+			<text class="middle">× {{item.quantity}} </text>
+			<!-- <text class="right">￥ {{filters.toFix(item.price)}}</text>-->
+			<text class="right">￥ {{filters.toFix(item.price)}}</text>
+		</view>
+	</block>
+	<view class="line"></view>
+	<view class="now-bottom">
+	<view class="total">总价：<text style="font-weight: bold;font-size: large;">￥{{filters.toFix(item.money)}}</text></view>
+	<view class="num">共{{item.foodnumber}}道菜</view>
+	</view>
+
+</view>
+	</view>
+	<!--返回首页按钮-->
+	<button type="warn" plain bind:tap="backHome" style="margin-top: 70rpx;">返回首页</button>
+
+

@@ -1,0 +1,48 @@
+/* pages/wish/wish.wxss */
+page{
+	background-color: #e40d0d;
+}
+.wishpage{
+  height:1210rpx;
+}
+.container1{
+  height: 10%;
+  
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+}
+.container2{
+  height: 30%;
+  
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+}
+.container3{
+  height: 10%;
+  margin-bottom: 30rpx;
+  
+}
+.container4{
+  height: 30%;
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  align-items: center; /* 垂直居中 */
+}
+.container5{
+  height: 20%;
+  
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+}
+
+.statement{
+  color: rgb(255, 255, 255);
+  margin: 5rpx 30rpx; 
+  text-align: center;
+
+}

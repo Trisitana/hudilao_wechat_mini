@@ -1,0 +1,69 @@
+<!--支付页面-->
+<view>
+<!-- 遮罩层 -->
+<view class="mask" wx:if="{{showPopup}}" ></view>
+  <view class="popup" wx:if="{{showPopup}}">
+  <view class="container1">
+    <view bindtap="closePopup">
+      <image src="/images/close.png" style="width: 30rpx;height:30rpx;margin: 10rpx;" ></image>
+    </view>
+    <view class="nospace"></view>
+    <view style="color: rgb(5, 5, 131);margin: 10rpx;">使用密码</view>
+  </view>
+  <view class="container2">
+    ￥{{totalprice}}
+  </view>
+  <view class="container3">
+    <view class="paytype" style="font-size: 30rpx;color: rgb(167, 167, 167);">支付方式</view>
+    <view class="nospace"></view>
+    <view class="money" style="font-size: 30rpx;color: rgb(172, 170, 170);">零钱</view>
+  </view>
+  <view class="container4">
+    <button class="paybutton" size="mini" bindtap="pay">确认支付</button>
+  </view>
+</view>
+
+<!--返回按钮-->
+<view style="margin-top: {{CustomBar*5/8}}px;margin-left: 10px;color: black;">
+    <view class="cuIcon-back" bindtap="backPage"></view>
+</view>
+<!--头像与昵称-->
+<view style="text-align: center;">
+    <image class="avatar" src="/images/logo.png"></image>
+    <view class="nickName">湖底捞</view>
+</view>
+
+<view class="page_box">
+    <!--金额-->
+    <view class="input_view">
+        <text class="title">金额</text>
+        <!--总价-->
+        <view class="input_box">
+            <text class="input_label">￥{{totalprice}}</text>
+            <!--输入内容-->
+            <text class="content" wx:if="{{content}}">{{content}}</text>
+            <view class="className" wx:if="{{keyShow}}"></view>
+        </view>
+        <view style="color:darkblue;margin-top: 40rpx;">添加转账说明</view>
+    </view>
+</view>
+</view>
+<!--显示密码输入框-->
+<view wx:if='{{showPayPwdInput}}'>
+    <view class='bg_layer'></view>
+    <view class='input_main'>
+        <view class='input_title'>
+            <view class='input_back' catchtap='hidePayLayer'><text></text></view>
+            <text>输入支付密码</text>
+        </view>
+        <view class='input_tip'><text>使用会员卡余额支付需要验证身份，验证通过后才可进行支付。</text></view>
+        <view class='input_row' catchtap='getFocus'>
+            <view class='pwd_item' wx:for='{{6}}' wx:key='item' wx:for-index='i'>
+                <text wx:if='{{pwdVal.length>i}}'></text>
+            </view>
+        </view>
+        <view class='forget_pwd' catchtap='hidePayLayer'>忘记密码</view>
+        <input class='input_control' password type='number' focus='{{payFocus}}' bindinput='inputPwd' maxlength='6'/><!--设置最大长度-->
+    </view>
+</view>
+

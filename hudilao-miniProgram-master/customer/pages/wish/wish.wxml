@@ -1,0 +1,27 @@
+<!--心愿单页面-->
+<view class="wishpage">
+<!--头部文字-->
+  <view class="container1">
+    <text  decode="{{true}}"  style="font-weight: bold; color: rgb(255, 255, 255);">念念不忘&nbsp;&nbsp;&nbsp;&nbsp;必有回响</text>
+  </view>
+  <!--许愿瓶图片-->
+  <view class="container2">
+    <image src="/images/wishimg1.jpg" style="width:350rpx;height:350rpx; border-radius: 175rpx;"></image>
+  </view>
+  <!--说明内容-->
+  <view class="container3">
+    <view class="statement">客户的用餐体验是我们的重中之重</view>
+    <view class="statement">我们坚持根据客户喜好每月上新</view>
+    <view class="statement">请写出你心心念念的菜品吧！</view>
+  </view>
+  <!--三个输入框-->
+  <view class="container4">
+    <input bindinput="inputChange1"value="{{food1}}" style="border-bottom:1px solid rgb(255, 255, 255);;color: rgb(255, 255, 255);margin: 40rpx;text-align: center;" />
+    <input bindinput="inputChange2" value="{{food2}}" style="border-bottom:1px solid rgb(255, 255, 255);;color: rgb(255, 255, 255);margin: 30rpx;text-align: center;"/>
+    <input  bindinput="inputChange3" value="{{food3}}" style="border-bottom:1px solid rgb(255, 255, 255);;color: rgb(255, 255, 255);margin: 30rpx;text-align: center;"/>
+  </view>
+  <!--提交按钮-->
+  <view class="container5">
+    <button bindtap="sendwish">种下心愿</button>
+  </view>
+</view>
